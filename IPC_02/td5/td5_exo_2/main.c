@@ -27,7 +27,7 @@ laStruct message; //Zone commune (variable globale)
 
 void *ma_fonction_thread1(void *arg) {
     long tid;
-    tid = syscall(SYS_gettid);
+    tid = syscall(SYS_gettid);          //affichage du tid
     printf("dans le thread l'argument etait :%d\n", *(int *)arg);
     sleep(3);
     message.v1=*(int *)arg;
